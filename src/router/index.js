@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Login from "../components/Login";
+import Registe from "../components/Registe";
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -17,9 +19,9 @@ export default new VueRouter({
     {
       path: '/registe',
       name: 'Registe',
-      component: Regist,
+      component: Registe,
       hidden: true,
     }
   ],
-  model:'history'
+  mode:'history'
 })

@@ -3,15 +3,28 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import store from "./store";
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+import {postKeyValueRequest} from "./utils/api";
+
+
+Vue.use(ElementUI,{size:'small'})
 
 Vue.config.productionTip = false
+Vue.prototype.postKeyValueRequest = postKeyValueRequest;
+
+
+
+
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#root',
+  el: '#app',
   router,
-  template: `<app/>`,
-  components:{
-    App
-  }
+  store,
+  components: { App },
+  template: '<app/>'
 })
